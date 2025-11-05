@@ -20,6 +20,7 @@ def init():
 def predict():
     try:
         data = request.get_json()
+        print(data)
         email_text = data.get('email', '')
         if not email_text:
             return jsonify({'error': 'No email text provided'})
