@@ -12,4 +12,4 @@ COPY tfidf_vectorizer.pkl .
 
 EXPOSE 8000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "ml_api:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "ml_api:app"]
